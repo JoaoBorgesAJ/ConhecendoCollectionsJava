@@ -1,4 +1,4 @@
-package List;
+package List.OperacoesBasicas;
 
 public class Tarefa {
     // Atributo
@@ -9,6 +9,10 @@ public class Tarefa {
     }
 
     public String getDescicao() {
+        return descricao;
+    }
+
+    public String toString() {
         return descricao;
     }
 }
