@@ -16,7 +16,7 @@ public class Livro {
         return titulo;
     }
 
-    public void setAutor() {
+    public void setAutor(String autor) {
         this.autor = autor;
     }
 

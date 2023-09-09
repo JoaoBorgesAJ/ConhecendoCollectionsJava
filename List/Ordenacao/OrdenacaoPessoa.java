@@ -18,8 +18,39 @@ public class OrdenacaoPessoa {
 
     public List<Pessoa> ordenarPorIdade() {
         List<Pessoa> pessoasPorIdade = new ArrayList<>(pessoaList);
-        Collections.sort(pessoasPorIdade);
-        return pessoasPorIdade;
+        if (!pessoaList.isEmpty()) {
+            Collections.sort(pessoasPorIdade);
+            return pessoasPorIdade;
+        } else {
+            throw new RuntimeException("A lista está vazia!");
+
+        }
     }
 
+    public List<Pessoa> ordenarPorAltura() {
+        List<Pessoa> pessoasPorAltura = new ArrayList<>(pessoaList);
+        if (!pessoaList.isEmpty()) {
+            Collections.sort(pessoasPorAltura, new ComparatorPorAltura());
+            return pessoasPorAltura;
+        } else {
+            throw new RuntimeException("A lista está vazia! ");
+        }
+    }
+
+    public static void main(String[] args) {
+        // Criando uma instância da classe OrdenacaoPessoas
+        OrdenacaoPessoa ordenacaoPessoa = new OrdenacaoPessoa();
+
+        // Adicionando a lista pessoas adicionadas
+        ordenacaoPessoa.adicionarPessoa("alice", 20, 1.56);
+        ordenacaoPessoa.adicionarPessoa("Bob", 30, 1.80);
+        ordenacaoPessoa.adicionarPessoa("Charlie", 25, 1.70);
+        ordenacaoPessoa.adicionarPessoa("David", 17, 1.56);
+
+        // Exibindo a lista de pessoas adicionadas
+        System.out.println(ordenacaoPessoa.pessoaList);
+
+        // Ordenando e exibindo por idade
+        System.out.println(ordenacaoPessoa.ordenarPorIdade());
+    }
 }

@@ -1,7 +1,6 @@
 package List.Ordenacao;
 
 import java.util.Comparator;
-import java.util.List;
 
 public class Pessoa implements Comparable<Pessoa> {
     // Atributos
@@ -49,9 +48,6 @@ class ComparatorPorAltura implements Comparator<Pessoa> {
     @Override
     public int compare(Pessoa p1, Pessoa p2) {
         return Double.compare(p1.getAltura(), p2.getAltura());
-    }
-    public List<Pessoa> ordenarPorAltura() {
-        List<Pessoa> pessoasPorIdade
     }
 
 }
