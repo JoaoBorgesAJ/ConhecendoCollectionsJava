@@ -6,7 +6,7 @@ import java.util.Set;
 public class ListaTarefas {
     // Atributo
     private Set<Tarefa> tarefasSet;
-    
+
     public ListaTarefas() {
         this.tarefasSet = new HashSet<>();
     }
@@ -29,7 +29,7 @@ public class ListaTarefas {
             System.out.println("O conjunto está vazio");
         }
 
-        if(tarefaParaRemover == null) {
+        if (tarefaParaRemover == null) {
             System.out.println("Tarefa não encontrada!");
         }
     }
@@ -45,6 +45,7 @@ public class ListaTarefas {
     public int contarTarefas() {
         return tarefasSet.size();
     }
+
     public Set<Tarefa> obterTarefasConcluidas() {
         Set<Tarefa> tarefasConcluidas = new HashSet<>();
         for (Tarefa t : tarefasSet) {
@@ -72,7 +73,6 @@ public class ListaTarefas {
             }
         }
     }
-
 
     public void marcarTarefaPendente(String descricao) {
         Tarefa tarefaParaMarcarComoPendente = null;

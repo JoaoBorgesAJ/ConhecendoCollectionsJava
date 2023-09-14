@@ -28,8 +28,10 @@ public class Contato {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Contato contato)) return false;
+        if (this == o)
+            return true;
+        if (!(o instanceof Contato contato))
+            return false;
         return Objects.equals(getNome(), contato.getNome());
     }
 
